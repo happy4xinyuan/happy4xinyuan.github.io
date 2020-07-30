@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>LC心得(1) - Hexo</title><meta description="犯过的那些错误 for(var i in nums){         if(nums[i]&amp;#x3D;&amp;#x3D;nums[i+1]){         ...         } &amp;lt;!--￼0--&amp;gt;  因此在 Js的数组遍历中,我们应该**避免使用for&amp;#x2F;in**, 而可以选择for&amp;#x2F;of替代.  &amp;lt;!--￼1--&amp;gt;  此外, &amp;#96;for&amp;#96;，&amp;#96;for&amp;#x2F;in&amp;#96;与&amp;#96;for&amp;#x2F;of&amp;#96;会保留外部作用域"><meta property="og:type" content="blog"><meta property="og:title" content="LC心得(1)"><meta property="og:url" content="https://www.happy4xinyuan.github.io/2020/07/30/LeetCode%E4%BB%A3%E7%A0%81%E5%BF%83%E5%BE%97/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="犯过的那些错误 for(var i in nums){         if(nums[i]&amp;#x3D;&amp;#x3D;nums[i+1]){         ...         } &amp;lt;!--￼0--&amp;gt;  因此在 Js的数组遍历中,我们应该**避免使用for&amp;#x2F;in**, 而可以选择for&amp;#x2F;of替代.  &amp;lt;!--￼1--&amp;gt;  此外, &amp;#96;for&amp;#96;，&amp;#96;for&amp;#x2F;in&amp;#96;与&amp;#96;for&amp;#x2F;of&amp;#96;会保留外部作用域"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://www.happy4xinyuan.github.io/img/og_image.png"><meta property="article:published_time" content="2020-07-30T02:11:26.363Z"><meta property="article:modified_time" content="2020-07-30T02:19:39.540Z"><meta property="article:author" content="XinyuanCai"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.happy4xinyuan.github.io/2020/07/30/LeetCode%E4%BB%A3%E7%A0%81%E5%BF%83%E5%BE%97/"},"headline":"Hexo","image":["https://www.happy4xinyuan.github.io/img/og_image.png"],"datePublished":"2020-07-30T02:11:26.363Z","dateModified":"2020-07-30T02:19:39.540Z","author":{"@type":"Person","name":"XinyuanCai"},"description":"犯过的那些错误 for(var i in nums){         if(nums[i]&#x3D;&#x3D;nums[i+1]){         ...         } &lt;!--￼0--&gt;  因此在 Js的数组遍历中,我们应该**避免使用for&#x2F;in**, 而可以选择for&#x2F;of替代.  &lt;!--￼1--&gt;  此外, &#96;for&#96;，&#96;for&#x2F;in&#96;与&#96;for&#x2F;of&#96;会保留外部作用域"}</script><link rel="canonical" href="https://www.happy4xinyuan.github.io/2020/07/30/LeetCode%E4%BB%A3%E7%A0%81%E5%BF%83%E5%BE%97/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/longlogo.png" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/happy4xinyuan"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-07-30T02:11:26.363Z" title="2020-07-30T02:11:26.363Z">2020-07-30</time><span class="level-item"><a class="link-muted" href="/categories/JS/">JS</a></span><span class="level-item">6 分钟 读完 (大约 910 个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">LC心得(1)</h1><div class="content"><h2 id="犯过的那些错误"><a href="#犯过的那些错误" class="headerlink" title="犯过的那些错误"></a>犯过的那些错误</h2><ol>
+<li><pre><code class="js"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> nums){
+        <span class="keyword">if</span>(nums[i]==nums[i+<span class="number">1</span>]){
+        ...
+        }
+&lt;!--￼<span class="number">0</span>--&gt;
+
+因此在 Js的数组遍历中,我们应该**避免使用<span class="keyword">for</span>/<span class="keyword">in</span>**, 而可以选择<span class="keyword">for</span>/<span class="keyword">of</span>替代.
+
+&lt;!--￼<span class="number">1</span>--&gt;
+
+此外, <span class="string">`for`</span>，<span class="string">`for/in`</span>与<span class="string">`for/of`</span>会保留外部作用域的<span class="string">`this`</span>。
+
+对于<span class="string">`forEach`</span>， 除非使用箭头函数，它的回调函数的 <span class="keyword">this</span> 将会变化。
+
+&lt;!--￼<span class="number">2</span>--&gt;</code></pre>
+</li>
+<li><p>JS对象 与 哈希表:</p>
+<p>js中的<strong>对象是基于哈希表结构</strong>的,而哈希表的查找时间复杂度为O(1),所以很多人喜欢用对象来做映射,减少遍历循环.</p>
+<p>对于找数组重复元素, 我们的核心是<strong>利用key存储数据, 利用value来记录该元素是否存在(bool)</strong>, 但是需要注意的是key值会被转化为字符串, 因此数组中元素类型应该保持一致.</p>
+<p>核心: object, 是属性名-属性值的键值对, 对于属性名(字符串)的ASII码进行哈希算法的应用, 这样就构建了高效(O(1)时间存取)的HashMap结构了.</p>
+</li>
+<li><p>一个<strong>很蠢</strong>的问题:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> tmp = nums[i];</span><br><span class="line">nums[i] = nums[nums[i]];</span><br><span class="line">nums[nums[i]] = tmp;</span><br></pre></td></tr></table></figure>
+
+<p>经常在自身哈希的题目中犯错, nums[i]的值被改变了呀!</p>
+<p>应该提前将nums[i]的值保存下来:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> numi = nums[i];</span><br><span class="line">[nums[i],nums[numi]] = [nums[numi],nums[i]]<span class="comment">//解构赋值语法ES6</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>拼写：querySelector,querySelectorAll,addEventListener,</p>
+</li>
+<li><p>querySelectorAll的函数返回为 Nodelist, 千万不要直接使用！！！</p>
+</li>
+</ol>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><ol start="3">
+<li><h5 id="找出数组中重复的数字。长度为-n-的数组-nums-里的所有数字都在-0～n-1-的范围内"><a href="#找出数组中重复的数字。长度为-n-的数组-nums-里的所有数字都在-0～n-1-的范围内" class="headerlink" title="找出数组中重复的数字。长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内"></a>找出数组中重复的数字。长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内</h5><ul>
+<li><p>排序之后遍历判断相邻元素: nlogn, n</p>
+</li>
+<li><pre><code class="JS"><span class="keyword">var</span> findRepeatNumber = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>{
+    nums.sort();
+   <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;nums.length;i++){
+        <span class="keyword">if</span>(nums[i]==nums[i+<span class="number">1</span>]){
+            <span class="keyword">return</span> <span class="number">9</span>;
+        }
+    }
+    <span class="keyword">return</span> <span class="number">0</span>;
+};
+&lt;!--￼<span class="number">5</span>--&gt;
+
+
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>采用基于对象的hash映射, n, n (基于假设set存取均为O(1)):</p>
+</li>
+<li><pre><code class="js"><span class="keyword">var</span> findRepeatNumber = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>{
+     <span class="keyword">let</span> obj = {};
+     <span class="keyword">for</span>(num <span class="keyword">of</span> nums){
+         <span class="keyword">if</span>(!obj[num]){
+            obj[num]=<span class="literal">true</span>;
+         }
+         <span class="keyword">else</span>{
+             <span class="keyword">return</span> num;
+         }
+     }
+ };</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>所有数字都在 0 ～ n-1 的范围内。因此不需要额外开辟空间，每次遍历时，检查当前元素是否放在了正确位置上（例如元素 i 应该放在下标为 i 的位置上）。如果放在了正确位置上，那么继续循环。否则：</p>
+<p>下标为 num 的元素 == num，说明当前元素 num 是重复的，直接返回<br>下标为 num 的元素 != num，交换当前元素和下标为 num 的元素，将当前元素放入到正确位置上</p>
+<p>n, 1 (基于假设set存取均为O(1))</p>
+</li>
+</ul>
+<ol start="4">
+<li><h4 id="二维数组中的查找"><a href="#二维数组中的查找" class="headerlink" title="二维数组中的查找"></a><a href="https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/">二维数组中的查找</a></h4><p>观察大小规则, 利用<strong>单调性</strong>查找元素!</p>
+</li>
+</ol>
+</div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button is-info donate"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/img/QR_zfb.jpg" alt="支付宝"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/07/30/Untitled/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Untitled</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/07/30/%E5%88%B7%E9%A2%98%E8%BF%87%E7%A8%8B%E5%AD%A6%E7%9A%84%E6%96%B0%E4%B8%9C%E8%A5%BF/"><span class="level-item">字符串的replace() &amp; RegExp</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/logo.png" alt="Xinyuan Cai"></figure><p class="title is-size-4 is-block line-height-inherit">Xinyuan Cai</p><p class="is-size-6 is-block">Front-End Developer, love &#039;gunpla&#039; (japenese robot anime model  kits) &amp; FPS games, enjoy Tech!</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>China Mainland</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">7</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">1</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/happy4xinyuan" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/happy4xinyuan"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://user.qzone.qq.com/779121147/infocenter"><i class="fab fa-qq"></i></a></div></div></div><!--!--><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/ES6/"><span class="tag">ES6</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/Front-End/"><span class="level-start"><span class="level-item">Front-End</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/JS/"><span class="level-start"><span class="level-item">JS</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E9%97%B2%E8%B0%88/"><span class="level-start"><span class="level-item">闲谈</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content size-small"><p><time dateTime="2020-07-30T02:12:20.340Z">2020-07-30</time></p><p class="title is-6"><a class="link-muted" href="/2020/07/30/Untitled/">Untitled</a></p><p class="is-uppercase"></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-07-30T02:11:26.363Z">2020-07-30</time></p><p class="title is-6"><a class="link-muted" href="/2020/07/30/LeetCode%E4%BB%A3%E7%A0%81%E5%BF%83%E5%BE%97/">LC心得(1)</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/JS/">JS</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-07-30T02:11:26.347Z">2020-07-30</time></p><p class="title is-6"><a class="link-muted" href="/2020/07/30/%E5%88%B7%E9%A2%98%E8%BF%87%E7%A8%8B%E5%AD%A6%E7%9A%84%E6%96%B0%E4%B8%9C%E8%A5%BF/">字符串的replace() &amp; RegExp</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/JS/">JS</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-07-30T02:11:26.331Z">2020-07-30</time></p><p class="title is-6"><a class="link-muted" href="/2020/07/30/set&amp;map/">arrow func 与 set map</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/JS/">JS</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-07-28T07:34:29.209Z">2020-07-28</time></p><p class="title is-6"><a class="link-muted" href="/2020/07/28/todolist/">Todo-List</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/Front-End/">Front-End</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2020/07/"><span class="level-start"><span class="level-item">七月 2020</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile is-mobile" href="http://www.gundam00.net/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">favorite anime</span></span><span class="level-right"><span class="level-item tag">www.gundam00.net</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button is-primary" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/longlogo.png" alt="Hexo" height="28"></a><p class="size-small"><span>&copy; 2020 XinyuanCai</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/happy4xinyuan"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'https://www.happy4xinyuan.github.io',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
