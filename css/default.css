@@ -1,3 +1,11 @@
+body {
+  background-color: transparent;
+  background-image: url("/img/background.png");
+}
+body {
+  background-color: transparent;
+  background-image: url("/img/background.png");
+}
 @-moz-keyframes spinAround {
   from {
     transform: rotate(0deg);
@@ -388,7 +396,7 @@ th:not([align]) {
   text-align: left;
 }
 html {
-  background-color: #f7f7f7;
+  background-color: 0xf 7f 7f 7;
   font-size: 14px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -10245,6 +10253,8 @@ html {
   text-size-adjust: 100%;
 }
 body {
+  background-color: transparent;
+  background-image: url("/img/background.png");
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -10746,6 +10756,9 @@ body > .section {
 .card {
   overflow: visible;
   border-radius: 4px;
+}
+.card:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.1);
 }
 .card + .card,
 .card + .column-right-shadow {
@@ -11410,4 +11423,8 @@ figure.highlight .section {
   .section {
     padding: 1.5rem 1rem;
   }
+}
+body {
+  background-color: transparent;
+  background-image: url("/img/background.png");
 }
