@@ -1,106 +1,18 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>初识react-router - 心远 XinyuanCai&#039;s Blog</title><meta description="1. 理解react-routerreact的一个插件库专门用来实现一个SPA应用(single page web application，SPA）基于react的项目基本都会用到此库"><meta property="og:type" content="blog"><meta property="og:title" content="初识react-router"><meta property="og:url" content="https://www.happy4xinyuan.github.io/2020/09/01/%E5%88%9D%E8%AF%86react-router/"><meta property="og:site_name" content="心远 XinyuanCai&#039;s Blog"><meta property="og:description" content="1. 理解react-routerreact的一个插件库专门用来实现一个SPA应用(single page web application，SPA）基于react的项目基本都会用到此库"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://www.happy4xinyuan.github.io/img/og_image.png"><meta property="article:published_time" content="2020-09-01T09:21:35.587Z"><meta property="article:modified_time" content="2020-09-01T13:50:27.255Z"><meta property="article:author" content="XinyuanCai"><meta property="article:tag" content="react"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.happy4xinyuan.github.io/2020/09/01/%E5%88%9D%E8%AF%86react-router/"},"headline":"心远 XinyuanCai's Blog","image":["https://www.happy4xinyuan.github.io/img/og_image.png"],"datePublished":"2020-09-01T09:21:35.587Z","dateModified":"2020-09-01T13:50:27.255Z","author":{"@type":"Person","name":"XinyuanCai"},"description":"1. 理解react-routerreact的一个插件库专门用来实现一个SPA应用(single page web application，SPA）基于react的项目基本都会用到此库"}</script><link rel="canonical" href="https://www.happy4xinyuan.github.io/2020/09/01/%E5%88%9D%E8%AF%86react-router/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/longlogo.png" alt="心远 XinyuanCai&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/happy4xinyuan"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-09-01T09:21:35.587Z" title="2020-09-01T09:21:35.587Z">2020-09-01</time><span class="level-item"><a class="link-muted" href="/categories/react/">react</a></span><span class="level-item">6 分钟 读完 (大约 877 个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">初识react-router</h1><div class="content"><h1 id="1-理解react-router"><a href="#1-理解react-router" class="headerlink" title="1. 理解react-router"></a>1. 理解react-router</h1><p>react的一个插件库<br>专门用来实现一个<strong>SPA应用</strong>(single page web application，SPA）<br>基于react的项目基本都会用到此库</p>
+<html lang="zh"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>分类: 闲谈 - 心远 XinyuanCai&#039;s Blog</title><meta description="“做题是最简单的事，难的是知道在什么时候做什么题”  一些杂谈图片, 借他人之口, 发发牢骚罢了…"><meta property="og:type" content="blog"><meta property="og:title" content="做题家"><meta property="og:url" content="https://www.happy4xinyuan.github.io/%E5%B0%8F%E9%95%87%E5%81%9A%E9%A2%98%E5%AE%B6%E4%B9%8B%E6%AD%BB.html"><meta property="og:site_name" content="心远 XinyuanCai&#039;s Blog"><meta property="og:description" content="“做题是最简单的事，难的是知道在什么时候做什么题”  一些杂谈图片, 借他人之口, 发发牢骚罢了…"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://www.happy4xinyuan.github.io/img/Screenshot_2020-09-11-12-16-42-799_com.tencent.mm.png"><meta property="article:published_time" content="2020-10-06T15:10:43.626Z"><meta property="article:modified_time" content="2020-09-11T08:13:13.977Z"><meta property="article:author" content="XinyuanCai"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/Screenshot_2020-09-11-12-16-42-799_com.tencent.mm.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.happy4xinyuan.github.io/%E5%B0%8F%E9%95%87%E5%81%9A%E9%A2%98%E5%AE%B6%E4%B9%8B%E6%AD%BB.html"},"headline":"心远 XinyuanCai's Blog","image":["https://www.happy4xinyuan.github.io/img/Screenshot_2020-09-11-12-16-42-799_com.tencent.mm.png"],"datePublished":"2020-10-06T15:10:43.626Z","dateModified":"2020-09-11T08:13:13.977Z","author":{"@type":"Person","name":"XinyuanCai"},"description":"“做题是最简单的事，难的是知道在什么时候做什么题”  一些杂谈图片, 借他人之口, 发发牢骚罢了…"}</script><link rel="canonical" href="https://www.happy4xinyuan.github.io/%E5%B0%8F%E9%95%87%E5%81%9A%E9%A2%98%E5%AE%B6%E4%B9%8B%E6%AD%BB.html"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/longlogo.png" alt="心远 XinyuanCai&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/happy4xinyuan"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="thumbnail" src="/img/Screenshot_2020-09-11-12-16-42-799_com.tencent.mm.png" alt="做题家"></span></div><article class="card-content article" role="article"><h1 class="title is-3 is-size-4-mobile">做题家</h1><div class="content"><blockquote>
+<p>“做题是最简单的事，难的是知道在什么时候做什么题”</p>
+</blockquote>
+<p>一些杂谈图片, 借他人之口, 发发牢骚罢了…</p>
 <a id="more"></a>
 
-<h1 id="2-几个重要问题"><a href="#2-几个重要问题" class="headerlink" title="2. 几个重要问题"></a>2. 几个重要问题</h1><h2 id="1-SPA应用"><a href="#1-SPA应用" class="headerlink" title="1). SPA应用"></a>1). SPA应用</h2><p>单页Web应用（single page web application，SPA）</p>
-<ul>
-<li>整个应用<strong>只有一个完整的页面</strong></li>
-<li>点击页面中的链接不会刷新页面, 本身也<strong>不会向服务器发请求</strong></li>
-<li>当点击<strong>路由链接</strong>时, 只会做<strong>页面的局部更新</strong></li>
-<li>数据都需要通过ajax请求获取, 并在前端异步展现</li>
-</ul>
-<h2 id="2-路由"><a href="#2-路由" class="headerlink" title="2). 路由"></a>2). 路由</h2><ol>
-<li><p>什么是路由?</p>
-<p>一个路由就是一个映射关系(key:value)<br>key为路由路径, value可能是function/component</p>
-</li>
-<li><p>路由分类<br> <strong>后台路由</strong>: node服务器端路由, value是function, 用来处理客户端提交的请求并返回一个响应数据<br> <strong>前台路由</strong>: 浏览器端路由, value是component, 当请求的是路由path时, 浏览器端前没有发送http请求, 但界面会更新显示对应的组件 </p>
-</li>
-<li><p>后台路由</p>
-</li>
-</ol>
-<ul>
-<li>注册路由: <code>router.get(path, function(req, res))</code></li>
-<li>当node接收到一个请求时, 根据请求路径找到匹配的路由, 调用路由中的函数来处理请求, 返回响应数据</li>
-</ul>
-<ol start="4">
-<li>前端路由</li>
-</ol>
-<ul>
-<li>注册路由:<code>&lt;Route path=&quot;/about&quot; component={About}&gt;</code></li>
-<li>当浏览器的hash变为#about时, 当前路由组件就会变为About组件</li>
-</ul>
-<h2 id="3-关于url中的"><a href="#3-关于url中的" class="headerlink" title="3). 关于url中的#"></a>3). 关于url中的#</h2><ol>
-<li>理解#<br>‘#’代表网页中的一个位置。其右面的字符，就是该位置的标识符<br>改变#不触发网页重载<br>改变#会改变浏览器的访问历史</li>
-<li>操作#<br>window.location.hash读取#值<br>window.onhashchange = func 监听hash改变</li>
-<li>学习资源:<br>阮一峰教程: <a href="http://www.ruanyifeng.com/blog/2011/03/url_hash.html">http://www.ruanyifeng.com/blog/2011/03/url_hash.html</a></li>
-</ol>
-<h1 id="3-react-router的学习资源"><a href="#3-react-router的学习资源" class="headerlink" title="3. react-router的学习资源"></a>3. react-router的学习资源</h1><p>github主页: <a href="https://github.com/ReactTraining/react-router">https://github.com/ReactTraining/react-router</a><br>官网教程: <a href="https://github.com/reactjs/react-router-tutorial">https://github.com/reactjs/react-router-tutorial</a><br>阮一峰教程: <a href="http://www.ruanyifeng.com/blog/2016/05/react_router.html">http://www.ruanyifeng.com/blog/2016/05/react_router.html</a></p>
-<h1 id="4-相关API"><a href="#4-相关API" class="headerlink" title="4. 相关API"></a>4. 相关API</h1><h2 id="1-react-router中的相关组件"><a href="#1-react-router中的相关组件" class="headerlink" title="1). react-router中的相关组件:"></a>1). react-router中的相关组件:</h2><p>Router: 路由器组件, 用来包含各个路由组件<br>Route: 路由组件, 注册路由<br>IndexRoute: 默认子路由组件<br>hashHistory: 路由的切换由URL的hash变化决定，即URL的#部分发生变化<br>Link: 路由链接组件</p>
-<h2 id="2-Router-路由器组件"><a href="#2-Router-路由器组件" class="headerlink" title="2). Router: 路由器组件"></a>2). Router: 路由器组件</h2><p>属性:  history={hashHistory} 用来监听浏览器地址栏的变化, 并将URL解析成一个地址对象，供React Router匹配<br>子组件: Route</p>
-<h2 id="3-Route-路由组件"><a href="#3-Route-路由组件" class="headerlink" title="3). Route: 路由组件"></a>3). Route: 路由组件</h2><p>属性1: path=”/xxx”<br>属性2: component={Xxx}<br>根路由组件: path=”/“的组件, 一般为App<br>子路由组件: 子<Route>配置的组件</p>
-<h2 id="4-IndexRoute-默认路由"><a href="#4-IndexRoute-默认路由" class="headerlink" title="4). IndexRoute: 默认路由"></a>4). IndexRoute: 默认路由</h2><pre><code>当父路由被请求时, 默认就会请求此路由组件</code></pre><h2 id="5-hashHistory"><a href="#5-hashHistory" class="headerlink" title="5). hashHistory"></a>5). hashHistory</h2><pre><code>用于Router组件的history属性
-作用: 为地址url生成?_k=hash, 用于内部保存对应的state</code></pre><h2 id="6-Link-路由链接"><a href="#6-Link-路由链接" class="headerlink" title="6). Link: 路由链接"></a>6). Link: 路由链接</h2><pre><code>属性1: to=&quot;/xxx&quot;
-属性2: activeClassName=&quot;active&quot;</code></pre><h1 id="5-react-router的基本使用"><a href="#5-react-router的基本使用" class="headerlink" title="5. react-router的基本使用"></a>5. react-router的基本使用</h1><h2 id="1-下载"><a href="#1-下载" class="headerlink" title="1). 下载"></a>1). 下载</h2><pre><code>npm install react-router --save</code></pre><h2 id="2-定义各个路由组件"><a href="#2-定义各个路由组件" class="headerlink" title="2). 定义各个路由组件"></a>2). 定义各个路由组件</h2><pre><code>1. About.js
-  import React from &apos;react&apos;
-  function About() {
-    return &lt;div&gt;About组件内容&lt;/div&gt;
-  }
-  export default About
-2. Home.js
-  import React from &apos;react&apos;
-  function Home() {
-    return &lt;div&gt;Home组件内容2&lt;/div&gt;
-  }
-  export default Home
-3. Repos.js
-  import React, {Component} from &apos;react&apos;
-  export default class Repos extends Component {
-    render() {
-      return (
-        &lt;div&gt;Repos组件&lt;/div&gt;
-      )
-    }
-  }
-4. App.js
-import React, {Component} from &apos;react&apos;
-import {Link} from &apos;react-router&apos;
-
-export default class App extends Component {
-  render() {
-    return (
-      &lt;div&gt;
-        &lt;h2&gt;Hello, React Router!&lt;/h2&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;Link to=&quot;/about&quot; activeClassName=&quot;active&quot;&gt;About2&lt;/Link&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;Link to=&quot;/repos&quot; activeClassName=&quot;active&quot;&gt;Repos2&lt;/Link&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-        {this.props.children}
-      &lt;/div&gt;
-    )
-  }
-}</code></pre><h2 id="3-index-js-注册路由-渲染路由器标签"><a href="#3-index-js-注册路由-渲染路由器标签" class="headerlink" title="3). index.js: 注册路由, 渲染路由器标签"></a>3). index.js: 注册路由, 渲染路由器标签</h2><pre><code>import React from &apos;react&apos;
-import {render} from &apos;react-dom&apos;
-import {Router, Route, IndexRoute, hashHistory} from &apos;react-router&apos;
-import App from &apos;./modules/App&apos;
-import About from &apos;./modules/About&apos;
-import Repos from &apos;./modules/Repos&apos;
-import Home from &apos;./modules/Home&apos;
-
-render((
-  &lt;Router history={hashHistory}&gt;
-    &lt;Route path=&quot;/&quot; component={App}&gt;
-      &lt;IndexRoute component={Home}/&gt;
-      &lt;Route path=&quot;/about&quot; component={About}&gt;&lt;/Route&gt;
-      &lt;Route path=&quot;/repos&quot; component={Repos}&gt;&lt;/Route&gt;
-    &lt;/Route&gt;
-  &lt;/Router&gt;
-), document.getElementById(&apos;app&apos;))</code></pre><h2 id="3-主页面-index-html"><a href="#3-主页面-index-html" class="headerlink" title="3). 主页面: index.html"></a>3). 主页面: index.html</h2><pre><code>&lt;style&gt;
-  .active {
-    color: red;
-  }
-&lt;/style&gt;</code></pre><h1 id="6-向路由组件传递请求参数"><a href="#6-向路由组件传递请求参数" class="headerlink" title="6. 向路由组件传递请求参数"></a>6. 向路由组件传递请求参数</h1></div><div class="article-tags size-small mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/react/">react</a></div><!--!--></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button is-info donate"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/img/QR_zfb.jpg" alt="支付宝"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/09/02/%E7%BB%83%E6%89%8Breact-router/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">练手react-router</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/08/31/%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E6%80%BB%E7%BB%93/"><span class="level-item">组件间通信</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
-            this.page.url = 'https://www.happy4xinyuan.github.io/2020/09/01/%E5%88%9D%E8%AF%86react-router/';
-            this.page.identifier = '2020/09/01/初识react-router/';
+<p><img src="/img/1599799274(1).jpg" alt="1599799274(1)"></p>
+<p><img src="/img/1599799407(1).jpg" alt="1599799407(1)"></p>
+<p><img src="/img/1599799428(1).jpg" alt="1599799428(1)"></p>
+<p><img src="/img/006JfssYly1gimjxkvwg4j30v90qvjwb.jpg" alt="006JfssYly1gimjxkvwg4j30v90qvjwb"></p>
+<p><img src="/img/1599799468(1).jpg" alt="1599799468(1)"></p>
+</div><!--!--></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button is-info donate"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/img/QR_zfb.jpg" alt="支付宝"></span></a></div></div></div><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'https://www.happy4xinyuan.github.io/%E5%B0%8F%E9%95%87%E5%81%9A%E9%A2%98%E5%AE%B6%E4%B9%8B%E6%AD%BB.html';
+            this.page.identifier = '小镇做题家之死.html';
         };
         (function() {
             var d = document, s = d.createElement('script');  
